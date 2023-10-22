@@ -65,6 +65,7 @@ export const projectsData: TProjects[] = [
       "Projeto pessoal para apresentar meu portifólio, experiência e conhecimento.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind"],
     imageUrl: portifolioImg,
+    github: "https://github.com/desdiogo/portifolio"
   },
   {
     title: "2Talk",
