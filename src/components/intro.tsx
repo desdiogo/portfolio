@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaTelegram } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -72,8 +72,8 @@ export default function Intro() {
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{opacity: 0, y: 100}}
+        animate={{opacity: 1, y: 0}}
         transition={{
           delay: 0.1,
         }}
@@ -87,7 +87,7 @@ export default function Intro() {
           }}
         >
           Entre em contato{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/>
         </Link>
 
         <a
@@ -96,7 +96,7 @@ export default function Intro() {
           download
         >
           Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/>
         </a>
 
         <a
@@ -104,7 +104,7 @@ export default function Intro() {
           href="https://linkedin.com/in/desdiogo"
           target="_blank"
         >
-          <BsLinkedin />
+          <BsLinkedin/>
         </a>
 
         <a
@@ -112,7 +112,15 @@ export default function Intro() {
           href="https://github.com/desdiogo"
           target="_blank"
         >
-          <FaGithubSquare />
+          <FaGithubSquare/>
+        </a>
+
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://t.me/desdiogo"
+          target="_blank"
+        >
+          <FaTelegram/>
         </a>
       </motion.div>
     </section>
