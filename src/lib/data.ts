@@ -1,7 +1,7 @@
 import { createElement } from "react";
 import { FaVuejs, FaLaravel } from "react-icons/fa";
-import twoTalkImg from "@/public/2talk.png";
-import portifolioImg from "@/public/portifolio.png";
+import twoTalkImg from "@@/public/2talk.png";
+import portifolioImg from "@@/public/portifolio.png";
 import { TProjects } from "./types";
 
 export const links = [
@@ -33,12 +33,12 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Desenvolvedor Full-Stack",
-    company: "Bulldesk",
+    title: "Desenvolvedor Front-End",
+    company: "2Talk",
     description:
-      "Neste projeto dava manutenção e criação de novas funcionalidades em um CRM  de marketing, utilizando Laravel e Vue.",
-    icon: createElement(FaLaravel),
-    date: "08/03/2021-06/08/2021",
+      "Estou trabalhando com desenvolvdor front-end, desenvolvendo um aplicativo voip e comunicação via chat ou sms, utiizando Vue, TypeScript, VueUse e Boostrap.",
+    icon: createElement(FaVuejs),
+    date: "01/2022",
   },
   {
     title: "Desenvolvedor Front-End",
@@ -46,15 +46,15 @@ export const experiencesData = [
     description:
       "Neste projeto foi desenvolvido um aplicativo voltado para agronegócio, utilizando Vue.",
     icon: createElement(FaVuejs),
-    date: "30/08/2021-15/11/2021",
+    date: "08/2021-11/2021",
   },
   {
-    title: "Desenvolvedor Front-End",
-    company: "2Talk",
+    title: "Desenvolvedor Full-Stack",
+    company: "Bulldesk",
     description:
-      "Estou trabalhando com desenvolvdor front-end, desenvolvendo um aplicativo voip e comunicação via chat ou sms, utiizando Vue, TypeScript, VueUse e Boostrap.",
-    icon: createElement(FaVuejs),
-    date: "17/01/2022",
+      "Neste projeto dava manutenção e criação de novas funcionalidades em um CRM  de marketing, utilizando Laravel e Vue.",
+    icon: createElement(FaLaravel),
+    date: "03/2021-08/2021",
   },
 ] as const;
 

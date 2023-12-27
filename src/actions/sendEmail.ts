@@ -1,4 +1,4 @@
-import { EmailResponse } from './../lib/types';
+import { EmailResponse } from '@/lib/types';
 "use server";
 
 import React from "react";
