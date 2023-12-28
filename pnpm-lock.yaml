@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@logtail/next':
+    specifier: ^0.1.4
+    version: 0.1.4(next@14.0.4)
   '@react-email/components':
     specifier: ^0.0.12
     version: 0.0.12(@types/react@18.2.45)(react@18.2.0)
@@ -204,6 +207,16 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: false
+
+  /@logtail/next@0.1.4(next@14.0.4):
+    resolution: {integrity: sha512-pqNqeZAJwUn99+w4ywjCd1j2AP/B3/gCUFJwC0L+7GiQz9n6AiqK3vomPJ1jnTWc6m0pqsWkoTt1TShnfEpUBQ==}
+    engines: {node: '>=15'}
+    peerDependencies:
+      next: ^12.1.4 || ^13 || ^14
+    dependencies:
+      next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+      whatwg-fetch: 3.6.20
     dev: false
 
   /@next/env@14.0.4:
@@ -3236,6 +3249,10 @@ packages:
     dependencies:
       glob-to-regexp: 0.4.1
       graceful-fs: 4.2.11
+    dev: false
+
+  /whatwg-fetch@3.6.20:
+    resolution: {integrity: sha512-EqhiFU6daOA8kpjOWTL0olhVOF3i7OrFzSYiGsEMB8GcXS+RrzauAERX65xMeNWVqxA6HXH2m69Z9LaKKdisfg==}
     dev: false
 
   /which-boxed-primitive@1.0.2:
