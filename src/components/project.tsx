@@ -87,7 +87,7 @@ function SiteLink({ site }: SiteLinkProps) {
 
   return (
     <a
-      className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+      className="bg-white h-14 w-14 p-4 text-gray-700 hover:text-gray-950 flex justify-center items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
       href={site}
       target="_blank"
     >
@@ -105,7 +105,7 @@ function GithubLink({ github }: GithubProps) {
 
   return (
     <a
-      className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+      className="bg-white h-14 w-14 p-4 text-gray-700 flex  justify-center items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
       href={github}
       target="_blank"
     >

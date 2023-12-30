@@ -2,6 +2,7 @@ import { createElement } from "react";
 import { FaVuejs, FaLaravel } from "react-icons/fa";
 import twoTalkImg from "@@/public/2talk.png";
 import portifolioImg from "@@/public/portifolio.png";
+import paintImg from "@@/public/paint.png";
 import { TProjects } from "./types";
 
 export const links = [
@@ -74,6 +75,15 @@ export const projectsData: TProjects[] = [
     tags: ["Vue", "VueUse", "TypeScript", "Bootstrap", "Pinia"],
     imageUrl: twoTalkImg,
     site: "https://app.2talk.com"
+  },
+  {
+    title: "Paint",
+    description:
+      "Projeto pessoal de desenho e pintura.",
+    tags: ["TypeScript", "HTML", "CSS"],
+    imageUrl: paintImg,
+    site: "https://desdiogo.com.br/paint",
+    github: "https://github.com/desdiogo/paint"
   },
 ];
 
