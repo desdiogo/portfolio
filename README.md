@@ -1,6 +1,6 @@
 # Portifólio
 
-Projeto pessoal para apresentar meu portifólio, experiência e conhecimento.
+Projeto pessoal para apresentar meu portfólio, experiência e conhecimento.
 
 ## Instalação do Projeto
 
