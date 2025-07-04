@@ -1,15 +1,16 @@
+import { redirect } from "next/navigation";
 import {sendEmail} from "@/actions/sendEmail";
 import toast from "react-hot-toast";
 import SubmitBtn from "@/components/submit-btn";
 import React from "react";
 
-export default function ContactForm({ onSuccess, onError }: { onSuccess: () => void, onError: (msg: string) => void }) {
+export default function ContactForm() {
   async function handleAction(formData: FormData) {
     const { error } = await sendEmail(formData);
     if (error) {
-      onError(error);
+      redirect("/?status=error&message=" + encodeURIComponent(error));
     } else {
-      onSuccess();
+      redirect("/?status=success");
     }
   }
 

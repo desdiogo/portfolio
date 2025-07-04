@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -10,7 +11,22 @@ import toast from "react-hot-toast";
 import ContactForm from "@/components/contact-form";
 
 export default function Contact() {
+  const searchParams = useSearchParams();
+
   const { ref } = useSectionInView("Contato");
+
+  useEffect(() => {
+    const status = searchParams.get("status");
+    const message = searchParams.get("message");
+
+    if (status === "success") {
+      toast.success("Email enviado com sucesso!");
+      window.history.replaceState({}, document.title, window.location.pathname);
+    } else if (status === "error" && message) {
+      toast.error(message);
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }, [searchParams]);
 
   return (
     <motion.section
@@ -40,10 +56,7 @@ export default function Contact() {
         ou através deste formulário.
       </p>
 
-      <ContactForm
-        onSuccess={() => toast.success("Email enviado com sucesso!")}
-        onError={(msg) => toast.error(msg)}
-      />
+      <ContactForm />
     </motion.section>
   );
 }
