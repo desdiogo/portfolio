@@ -1,49 +1,30 @@
-"use client";
+'use client'
 
-import React, { useEffect } from "react";
-import { useSearchParams } from "next/navigation";
-import SectionHeading from "./section-heading";
+import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import toast from "react-hot-toast";
+import SectionHeading from "./section-heading";
 import ContactForm from "@/components/contact-form";
+import QueryToToastHandler from "@/components/query-to-toast-handler"; // ✅ Importa o handler
 
 export default function Contact() {
-  const searchParams = useSearchParams();
-
   const { ref } = useSectionInView("Contato");
-
-  useEffect(() => {
-    const status = searchParams.get("status");
-    const message = searchParams.get("message");
-
-    if (status === "success") {
-      toast.success("Email enviado com sucesso!");
-      window.history.replaceState({}, document.title, window.location.pathname);
-    } else if (status === "error" && message) {
-      toast.error(message);
-      window.history.replaceState({}, document.title, window.location.pathname);
-    }
-  }, [searchParams]);
 
   return (
     <motion.section
       id="contact"
       ref={ref}
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
     >
+      {/* ✅ Usa com suspense de forma limpa */}
+      <Suspense fallback={null}>
+        <QueryToToastHandler />
+      </Suspense>
+
       <SectionHeading>Contato</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80 text-justify">
