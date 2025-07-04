@@ -64,7 +64,7 @@ export default function Intro() {
       >
         <span className="font-bold">Olá me chamo Diogo.</span> Eu sou{" "}
         <span className="font-bold">desenvolvedor full-stack</span> com{" "}
-        <span className="font-bold">3 anos</span> de experiência. Eu gosto
+        <span className="font-bold">4 anos</span> de experiência. Eu gosto
         de construir <span className="italic">sites & aplicativos</span>. Meu foco é{" "}
         <span className="underline">Vue (Nuxt.js)</span> e{" "}
         <span className="underline">React (Next.js)</span>.
